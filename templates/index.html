@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF Generator</title>
+</head>
+<body>
+    <h1>PDF Generator</h1>
+    <form action="/generate" method="post" enctype="multipart/form-data">
+        <fieldset>
+            <legend>Upload Template</legend>
+            <label for="template_pdf">Choose a PDF template:</label>
+            <input type="file" id="template_pdf" name="template_pdf" accept="application/pdf" required>
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend>Text 1 Settings</legend>
+            <label for="text_to_add1">Text to add 1:</label>
+            <input type="text" id="text_to_add1" name="text_to_add1" required>
+            <br>
+            <label for="font1">Font:</label>
+            <select id="font1" name="font1">
+                <option value="Arial">Arial</option>
+                <option value="Times">Times</option>
+                <option value="Courier">Courier</option>
+                <option value="Helvetica">Helvetica</option>
+            </select>
+            <br>
+            <label for="font_size1">Font Size:</label>
+            <input type="number" id="font_size1" name="font_size1" value="12" min="8" max="72">
+            <br>
+            <label for="x1">X-coordinate:</label>
+            <input type="number" id="x1" name="x1" value="10" min="0">
+            <br>
+            <label for="y1">Y-coordinate:</label>
+            <input type="number" id="y1" name="y1" value="10" min="0">
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend>Text 2 Settings</legend>
+            <label for="text_to_add2">Text to add 2:</label>
+            <input type="text" id="text_to_add2" name="text_to_add2" required>
+            <br>
+            <label for="font2">Font:</label>
+            <select id="font2" name="font2">
+                <option value="Arial">Arial</option>
+                <option value="Times">Times</option>
+                <option value="Courier">Courier</option>
+                <option value="Helvetica">Helvetica</option>
+            </select>
+            <br>
+            <label for="font_size2">Font Size:</label>
+            <input type="number" id="font_size2" name="font_size2" value="12" min="8" max="72">
+            <br>
+            <label for="x2">X-coordinate:</label>
+            <input type="number" id="x2" name="x2" value="10" min="0">
+            <br>
+            <label for="y2">Y-coordinate:</label>
+            <input type="number" id="y2" name="y2" value="30" min="0">
+        </fieldset>
+        <br>
+        <button type="submit">Generate PDF</button>
+    </form>
+</body>
+</html>
